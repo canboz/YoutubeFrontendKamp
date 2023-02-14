@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            height: 70px;
+            background-color: pink;
+            align-items: center;
+            padding: 0px 15px;
+        }
+
+        .headerLink {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin-right: 13px;
+        }
+
+        .banner {
+            background-image: url(banner.jpg);
+            height: 400px;
+            position: relative;
+        }
+
+        .bannerDiv {
+            position: absolute;
+            top: 38px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .imgMainDiv {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0px;
+            flex-wrap: wrap;
+        }
+
+        .imgResDiv {
+            flex: 25%;
+        }
+
+
+        .imgDiv {
+            border: 1px dashed black;
+            /* width: 200px; */
+            border-radius: 30px;
+            /* margin-right: 30px; */
+            margin: 20px 0px;
+        }
+
+        .imgDiv img {
+            border-radius: 30px 30px 0px 0px;
+            width: 100%;
+        }
+
+        .imgDiv h3 {
+            text-align: center;
+            color: red;
+        }
+
+        .imgDiv p {
+            padding: 0px 20px;
+            text-align: center;
+        }
+
+        .imgDiv .pricePurchaseDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .imgDiv .price {
+            color: red;
+            font-size: 28px;
+        }
+
+        .imgDiv .purchase {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px;
+            background-color: green;
+            color: white;
+            width: 100px;
+        }
+
+
+        .footer {
+            background-color: lightcoral;
+            height: 150px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .footerList {
+            list-style-type: none;
+        }
+
+        .footerList a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .footerList li {
+            margin-top: 10px;
+        }
+
+
+        .mobileIcon {
+            display: none;
+        }
+
+        @media only screen and (max-width: 900px) {
+
+            .imgResDiv {
+                flex: 50%;
+            }
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .imgMainDiv {
+                flex-direction: column;
+            }
+
+            .imgResDiv {
+                flex: 100%;
+            }
+
+            .imgDiv {
+                /* width: 100%; */
+                margin-bottom: 30px;
+            }
+
+            .imgDiv p {
+                text-align: center;
+            }
+
+            .footer {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .footerList {
+                display: flex;
+                padding: 0;
+            }
+
+            .footerList li {
+                margin-right: 10px;
+            }
+
+            .mobileIcon {
+                display: block;
+            }
+
+            .headerImgDiv {
+                display: none;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            .mobileLink {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .mobileLinkDiv {
+                display: none;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <script>
+        function toggle() {
+            let x = document.getElementById("navDiv");
+
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+    </script> -->
+
+    <div class="header">
+        <div class="mobileIcon" onclick="toggle()">
+            <img src="icon.jpg" alt="" height="50px">
+        </div>
+        <div class="headerImgDiv">
+            <img src="burgerlogo.png" alt="" height="50px">
+        </div>
+        <div id="navDiv" class="mobileLinkDiv">
+            <div class="mobileLink">
+                <a class="headerLink" href="">Home</a>
+                <a class="headerLink" href="">About</a>
+                <a class="headerLink" href="">Contact</a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container">
+        <div class="banner">
+            <div class="bannerDiv">
+                <h3>Efsane Banner</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum magnam eaque illo corporis pariatur
+                    quia
+                    velit voluptates, enim quo tenetur vero! Totam quae consequatur at, debitis tempore dolores!
+                    Corporis,
+                    modi?</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="imgDiv">
+                    <img class="efso" src="burger.jpg">
+                    <h3>Kasap Burger</h3>
+                    <p>Bol Malzemeli Efsane Burger
+                    </p>
+                    <div class="pricePurchaseDiv">
+                        <p class="price">45.99 <i>TL</i></p>
+                        <button class="purchase">Satın Al</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <ul class="footerList">
+            <li><a href="">Anasayfa</a></li>
+            <li><a href="">Hakkımızda</a></li>
+            <li><a href="">İletişim</a></li>
+        </ul>
+        <img src="burgerlogo.png" height="80px" alt="">
+        <ul class="footerList">
+            <li><a href="">Burgerler</a></li>
+            <li><a href="">Restoranlar</a></li>
+            <li><a href="">Kariyer</a></li>
+        </ul>
+
+    </div>
+    <script>
+        function toggle() {
+            let x = document.getElementById("navDiv");
+
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
