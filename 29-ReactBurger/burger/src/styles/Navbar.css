@@ -1,0 +1,22 @@
+.navbar {
+  background-color: brown;
+}
+.navbar .main {
+  display: flex;
+  align-items: center;
+  padding: 15px 0px 15px 150px;
+}
+.navbar .main img {
+  height: 70px;
+}
+
+.navbar .mainLink {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
