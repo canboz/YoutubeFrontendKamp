@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let post of posts">
+      <app-card [titleChild]="post.title" [imageUrlChild]="post.imageUrl" [usernameChild]="post.username"
+        [contentChild]="post.content"></app-card>
+
+    </div>
+
+  </div>
+
+</div>
