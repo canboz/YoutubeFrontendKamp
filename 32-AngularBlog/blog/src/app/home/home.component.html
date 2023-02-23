@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 mt-5" *ngFor="let post of blogData | slice: (page-1) * pageSize : page * pageSize">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title style="display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;">{{post.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/image{{post.imageId}}.jpg">
+        <mat-card-content>
+          <p style="display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;">
+            {{post.body}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="openDialog(post,false)">Görüntüle</button>
+          <button mat-raised-button color="accent" (click)="openDialog(post,true)">Düzenle</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+
+  <div style="display: flex; justify-content: center;" class="my-3">
+    <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="blogData.length"></ngb-pagination>
+  </div>
+
+</div>

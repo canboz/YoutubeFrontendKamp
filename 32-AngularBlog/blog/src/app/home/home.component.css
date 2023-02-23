@@ -1,0 +1,6 @@
+.mat-mdc-card-header {
+  justify-content: center;
+}
+.mdc-card__actions {
+  justify-content: space-between;
+}
